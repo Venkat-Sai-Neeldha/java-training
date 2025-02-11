@@ -1,15 +1,21 @@
-package day4;
-
-public class d4p6 {
+import java.util.Scanner;
+/**
+ * @author venkat
+ * @apiNote this is a program to print fibonacci numbers
+ * 
+ * **/
+public class fibonacci {
 
 	public static void main(String[] args) {
-		int number=10;
 		int firstno=-1;
 		int secondno=1;
 		int sum;
-		for(int i=0;i<number;i++) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter the number");
+		int number=scan.nextInt();
+			while(true) {
 			sum=firstno+secondno;
-			
+			if(sum<number) {
 			if(sum%3==0 && sum%5==0) {
 				System.out.println(sum+" :I am spiderman and ironman");
 			}
@@ -26,6 +32,12 @@ public class d4p6 {
 			secondno=sum;
 			
 		}
+			else {
+				break;
+			}
+			
+			}
+		scan.close();	
 
 	}
 
